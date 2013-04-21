@@ -64,23 +64,17 @@ void createLoginPage() {
      .setFocus(true)
      .setColor(color(255,255,255))
     ;
+    //color(2, 52, 77)
+    
     tf.captionLabel().setControlFont(cf12);
         tf.captionLabel().hide();
         tf.captionLabel().setColor(0);
-//    tf.captionLabel().setPosition(0,0);
- 
- 
-/*    fill(0);
-    textFont(font12);        
-    text("NAME :", 180, 222);
-    text("ROLE :", 180, 292);
-*/
     radio = cp5.addRadioButton("radioButton")
          .setPosition(250, 280)
          .setSize(15,15)
          .setColorForeground(color(120))
          .setColorActive(color(255))
-         .setColorLabel(color(2, 52, 77))
+         .setColorLabel(color(255))
          .setItemsPerRow(5)
          .setSpacingColumn(120)
          .addItem("Geologist",1)
@@ -90,7 +84,7 @@ void createLoginPage() {
          ;
      
      for(Toggle t:radio.getItems()) {
-       t.captionLabel().setColorBackground(color(204));
+ //      t.captionLabel().setColorBackground(color(204));
        t.captionLabel().setControlFont(cf12);
        t.captionLabel().style().moveMargin(-7,0,0,-3);
        t.captionLabel().style().movePadding(7,0,0,3);
@@ -135,6 +129,13 @@ void hideLoginPage() {
 }
 
 void showLoginPage() {
+  PImage img;
+  img = loadImage("welcome.jpg");
+  image(img, 0, 0, 800, 600);
+
+  fill(204,0,0,127);
+  rect(50, 80, 700 , 350);
+  
   fill(0,0,255);
   textFont(createFont("arial",36));        
   text("CURIOSITY@PLAY", 230, 150);
@@ -143,10 +144,10 @@ void showLoginPage() {
   loginBtn.show(); 
   cp5.controller("Name").show(); 
   radio.show(); 
-  fill(0);
-  textFont(font12);        
-  text("NAME :", 180, 222);
-  text("ROLE :", 180, 292);
+  fill(255);
+  textFont(font16);        
+  text("Enter your name :", 100, 222);
+  text("Choose your role :", 100, 292);
 }
 
 void createMainPage(String userName, String role) {
