@@ -70,11 +70,11 @@ void createLoginPage() {
 //    tf.captionLabel().setPosition(0,0);
  
  
-    fill(0);
+/*    fill(0);
     textFont(font12);        
     text("NAME :", 180, 222);
     text("ROLE :", 180, 292);
-
+*/
     radio = cp5.addRadioButton("radioButton")
          .setPosition(250, 280)
          .setSize(15,15)
@@ -112,6 +112,8 @@ void createLoginPage() {
      .setSize(100,25)
       ;
     quitBtn.captionLabel().setControlFont(cf16);
+    showLoginPage();
+    
  }
  
 public void Login(int theValue) {
@@ -133,6 +135,10 @@ void hideLoginPage() {
 }
 
 void showLoginPage() {
+  fill(0,0,255);
+  textFont(createFont("arial",36));        
+  text("CURIOSITY@PLAY", 230, 150);
+
   quitBtn.show(); 
   loginBtn.show(); 
   cp5.controller("Name").show(); 
