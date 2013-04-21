@@ -76,11 +76,11 @@ void createLoginPage() {
          .setColorActive(color(255))
          .setColorLabel(color(255))
          .setItemsPerRow(5)
-         .setSpacingColumn(120)
+         .setSpacingColumn(100)
          .addItem("Geologist",1)
-         .addItem("Meteorologist",2)
+         .addItem("Biologist",2)
          .addItem("Mineralogist",3)
-         .addItem("Chemist",4)
+         .addItem("Meteorologist",4)
          ;
      
      for(Toggle t:radio.getItems()) {
