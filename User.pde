@@ -11,8 +11,8 @@ class User extends Drawable {
   
   void render() {
     image(usrImg, 7, 7, 20, 20);
-    fill(0,0,255);
-    textFont(font20);        
+    fill(0);
+    textFont(font12);        
     text(name + " (" + role + ")", 35, 23);
   }
 }

@@ -27,17 +27,22 @@ class CommandArea extends Drawable
   }
  
   void render() {
-    fill(255);
-
     // Top login info area
+    fill(255);
     rect(0, 0, W, TOP_AREA_H);
 
-    // Bottom messages area
-    rect(0, y, W, h);
+    // Main page title     
+    fill(0,0,255);
+    textFont(createFont("arial",30));        
+    text("Scientist step", 290, 27);
 
+    // Bottom messages area
+    fill(255);
+    rect(0, y, W, h);
     rect(10 + 2*KNOB_RADIUS, y + 5, W - 130 - 2*KNOB_RADIUS, BOTTOM_AREA_H-10);
-    fill(messageColor);
-    
+
+    // Messages to current user
+    fill(messageColor); 
     textFont(font16);        
 
     int messageH = 17;

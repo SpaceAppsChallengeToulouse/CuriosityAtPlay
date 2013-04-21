@@ -214,16 +214,26 @@ public void GO(int theValue) {
   fill(0, 0, 255);
   PFont font36 = createFont("arial",36);
   textFont(font36);        
-  text("Bye Bye ...", 320, 280); 
+  text("Next stage : Engineering process ...", 320, 280); 
 }
 
 public void Submit(int theValue) {
   pageIndex = 2;
   hideMainPage();
+  
+  // Top info area
+  fill(255);
+  rect(0, 0, W, TOP_AREA_H);
+
+  // Main page title     
+  fill(0,0,255);
+  textFont(createFont("arial",30));        
+  text("Collaborative step", 290, 27);
+
   fill(0);
   textFont(font20);        
   int xPos = 50;
-  int yPos = 20;
+  int yPos = 50;
   PImage img;
   img = loadImage("chemist.png");
   image(img, xPos, yPos, 300, 174);
@@ -234,12 +244,12 @@ public void Submit(int theValue) {
   text("Geologist interests", W - xPos - 300, yPos + 200); 
 
   img = loadImage("meteorologist.png");
-  image(img, xPos, yPos + 250, 300, 174);
-  text("Meteorologist interests", xPos, yPos + 450); 
+  image(img, xPos, yPos + 210, 300, 174);
+  text("Meteorologist interests", xPos, yPos + 410); 
 
   img = loadImage("mineralogist.png");
-  image(img, W - xPos - 300, yPos + 250, 300, 174);
-  text("Mineralogist interests", W - xPos - 300, yPos + 450); 
+  image(img, W - xPos - 300, yPos + 210, 300, 174);
+  text("Mineralogist interests", W - xPos - 300, yPos + 410); 
 
   // Chat area
   fill(255);

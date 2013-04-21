@@ -12,7 +12,9 @@ class Clock extends Drawable {
 
   void render() {
     fill(255,0,0);
-    textFont(font20);        
-    text("Countdown : " + value + "s", 320, 23);
+//    textFont(font20);        
+//    text("Countdown : " + value + "s", 320, 23);
+    textFont(createFont("arial",36));
+    text("" + value + "s", 700, 550);
   }
 }
